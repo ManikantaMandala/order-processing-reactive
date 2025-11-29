@@ -1,8 +1,6 @@
-package com.mandala.order_processing_system.model;
+package com.mandala.order_processing_system.dto;
 
 import java.util.List;
-
-import com.mandala.order_processing_system.enums.Stage;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,8 +13,8 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Status {
-	private Long id;
-	private Long orderId;
-	private List<Stage> history;
+public class OrderDtoResponse {
+    private Long id;
+    private List<Long> productIdList;
+    private String message;
 }
